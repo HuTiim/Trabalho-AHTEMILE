@@ -3,9 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Origem Universo</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/pag1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+
+        $(function () {
+      $("#paginaHome").fadeIn(200);
+    });
+    
+    function openPage(idPagina, link)
+    {
+      $(".tab").hide();      
+      $("ul.navbar-nav, li").removeClass("active");          
+
+      $("#" + idPagina).fadeIn(500);     
+      if (link != null)
+        link.parentNode.className += " active";
+    }
+    
+    </script>
+
+
+
+
+
 </head>
 <body>
+
+    <div class="container">
+
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+          
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">Raízes Cósmicas</a>
+            </div>
+            
+            <ul class="nav navbar-nav">
+              <li class="active"><a class="navLink" href="#" onclick="openPage('paginaHome', this);">A Origem</a></li>
+              <li><a class="navLink" href="#" onclick="openPage('pagina1', this);">Pioneiros</a></li>
+              <li><a class="navLink" href="#" onclick="openPage('pagina2', this);">Sistema Solar</a></li>
+            </ul>
+            
+          </div>
+        </nav>
+
+    </nav>
+
+     <div class="tab" id="paginaHome">
+        <h3 >A Origem</h3>
+        <p>Conteúdo da página home...</p>  
+     </div>
     
+     <div class="tab" id="pagina1">
+        <h3>Pioneiros</h3>
+        <p>Conteúdo da página 1...</p>  
+     </div>
+        
+     <div class="tab" id="pagina2">
+        <h3>Sistema Solar</h3>
+        <p>Conteúdo da página 2...</p>  
+     </div>
+  
+    </div>
+
+
+
+
+
+
+
+
 </body>
 </html>

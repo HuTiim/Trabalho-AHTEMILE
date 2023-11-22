@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <style>
+    body {
+      padding: 50px;
+    }
+    .tab {
+      padding: 20px;
+      display: none;
+      border: 0.5px solid lightgray;
+    }
+    
+  </style>
+  
+  <script>
+  
+    $(function () {
+      $("#paginaHome").fadeIn(200);
+    });
+    
+    function openPage(idPagina, link)
+    {
+      $(".tab").hide();      
+      $("ul.navbar-nav, li").removeClass("active");          
+
+      $("#" + idPagina).fadeIn(500);     
+      if (link != null)
+        link.parentNode.className += " active";
+    }
+    
+  </script>
+  
+</head>
+<body>
+
+<div class="container">
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+    
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">WebSiteName</a>
+      </div>
+      
+      <ul class="nav navbar-nav">
+        <li class="active"><a class="navLink" href="#" onclick="openPage('paginaHome', this);">Home</a></li>
+        <li><a class="navLink" href="#" onclick="openPage('pagina1', this);">Pagina 1</a></li>
+        <li><a class="navLink" href="#" onclick="openPage('pagina2', this);">Pagina 2</a></li>
+        <li><a class="navLink" href="#" onclick="openPage('pagina3', this);">Pagina 3</a></li>
+      </ul>
+      
+    </div>
+  </nav>
+
+  <div class="tab" id="paginaHome">
+    <h3>Página Home</h3>
+    <p>Conteúdo da página home...</p>  
+  </div>
+
+  <div class="tab" id="pagina1">
+    <h3>Página 1</h3>
+    <p>Conteúdo da página 1...</p>  
+  </div>
+  
+  <div class="tab" id="pagina2">
+    <h3>Página 2</h3>
+    <p>Conteúdo da página 2...</p>  
+  </div>
+
+  <div class="tab" id="pagina3">
+    <h3>Página 3</h3>
+    <p>Conteúdo da página 3...</p>  
+  </div>
+
+</div>
+
+</body>
+</html>

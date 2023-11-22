@@ -1,0 +1,24 @@
+body{
+    background-image: url(../Imagens/i552851.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.tab {
+    padding: 20px;
+    display: none;
+}
+
+h3{
+    color: #C97C38;
+    position: relative;
+    right: -425px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 45px;
+}
+
+p{
+    position: relative;
+    color: whitesmoke;
+    right: -200px;
+}
