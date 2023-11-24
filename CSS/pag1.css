@@ -17,8 +17,23 @@ h3{
     font-size: 45px;
 }
 
-p{
-    position: relative;
-    color: whitesmoke;
-    right: -200px;
+ol{
+    color: white;
+    font-style: italic;
+    font-size: 19px;
+}
+
+a{
+    color: #1BBABE;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#barra{
+    background-color: #222222 !important;
+    padding: 0;
+}
+
+.nav-item{
+    padding-top: 8px;
+    padding-bottom: 8px;
 }

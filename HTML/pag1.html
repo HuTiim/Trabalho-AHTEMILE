@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Origem Universo</title>
     
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../CSS/pag1.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <script>
 
         $(function () {
       $("#paginaHome").fadeIn(200);
+      // $('.nav-item').click(()=>{
+      //   $('.nav-item').css("backgroundColor", "#080808")
+      // })
     });
     
     function openPage(idPagina, link)
@@ -24,6 +27,10 @@
       $("#" + idPagina).fadeIn(500);     
       if (link != null)
         link.parentNode.className += " active";
+    }
+    function changeviadagem(id) {
+      $('.nav-item').css("backgroundColor", "#222222")
+      $("#"+id).css("backgroundColor", "#080808")
     }
     
     </script>
@@ -37,7 +44,7 @@
 
     <div class="container">
 
-        <nav class="navbar navbar-inverse">
+        <!-- <nav class="navbar navbar-inverse">
           <div class="container-fluid">
           
             <div class="navbar-header">
@@ -51,18 +58,74 @@
             </ul>
             
           </div>
+        </nav> -->
+        <nav class="navbar navbar-expand-lg bg-dark" id="barra" data-bs-theme="dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Raízes Cósmicas</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item" id="0" onclick="changeviadagem(0)">
+                  <a class="nav-link active" aria-current="page" href="#" onclick="openPage('paginaHome', this)">A Origem</a>
+                </li>
+                <li class="nav-item" id="1" onclick="changeviadagem(1)">
+                  <a class="nav-link" href="#" onclick="openPage('pagina1', this)">Pioneiros</a>
+                </li>
+                <li class="nav-item" id="2" onclick="changeviadagem(2)">
+                  <a class="nav-link" href="#" onclick="openPage('pagina2', this)">Sistema Solar</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </nav>
 
-    </nav>
+    
 
      <div class="tab" id="paginaHome">
         <h3 >A Origem</h3>
-        <p>Conteúdo da página home...</p>  
+        <ol>Na cosmologia moderna, a origem do Universo é o instante em que surgiram toda a matéria e a energia que existem atualmente no Universo como consequência de uma grande expansão. A teoria do Big Bang é abertamente aceita pela ciência em nossos dias e implica que o Universo poderia se ter originado há 13,73 bilhões de anos, num instante definido.[1][2] Na década de 1930, o astrónomo estadunidense Edwin Hubble confirmou que o Universo estava se expandindo, fenômeno que o sacerdote e astrofísico George Lemaitre descreveu em sua investigação sobre a expansão do Universo (Big Bang), baseado nas equações de Albert Einstein e com a teoria da relatividade geral. No entanto, o próprio Einstein não acreditou em seus resultados, pois lhe parecia absurdo que o Universo se encontrasse em infinita expansão, pelo que agregou a suas equações a famosa "constante cosmológica" (esta constante resolvia o problema da expansão infinita), à qual posteriormente denominaria ele mesmo como o maior erro de sua vida. Por isto Hubble foi reconhecido como o cientista que descobriu a expansão do Universo.[carece de fontes]</ol>
+        <br>
+            <ol>Existem diversas teorias científicas a respeito da origem do Universo. As mais aceitas são a do Big Bang e a teoria inflacionária, que se complementam. No entanto ambas teorias conseguem explicar o que ocorreu a partir dos primeiros instantes da expansão Universal, mas não conseguem explicar as condições iniciais, isto é, o que ocorreu antes da própria expansão. Existem vários modelos teóricos, no entanto, nenhum foi comprovado.[carece de fontes]</ol>
+        <br>
+            <ol>A Origem do Universo é um dos temas mais importantes da Cosmologia e continua sendo um dos maiores mistérios da Ciência.</ol>
+        <br>
+        <ol>"A corrida espacial foi um dos capítulos mais conhecidos da Guerra Fria, aconteceu entre 1957 e 1975 e foi travada entre Estados Unidos e União Soviética. A corrida espacial foi responsável por mobilizar altas quantias de dinheiro com o intuito de promover a exploração do espaço. Nela, soviéticos e americanos incentivaram o desenvolvimento científico, realizaram expedições tripuladas ao espaço, e, como ápice dessa disputa, foi organizada pelos americanos uma expedição que levou o homem à Lua."
+
+          Veja mais sobre "Corrida espacial" em: <a href="https://brasilescola.uol.com.br/historiag/a-corrida-espacial.htm"><br> <strong>CLIQUE AQUI PARA SABER MAIS</strong></a></ol>
+         
      </div>
     
+     
      <div class="tab" id="pagina1">
         <h3>Pioneiros</h3>
-        <p>Conteúdo da página 1...</p>  
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../Imagens/images.jpg" " alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../Imagens/Neil_Armstrong_pillars.jpg"  alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../Imagens/images (1).jpg"  alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div> 
      </div>
         
      <div class="tab" id="pagina2">
@@ -71,6 +134,7 @@
      </div>
   
     </div>
+    
 
 
 
