@@ -17,26 +17,45 @@
       // $('.nav-item').click(()=>{
       //   $('.nav-item').css("backgroundColor", "#080808")
       // })
-    });
+          $(".ss").click(()=>{
+            $('body').css("backgroundImage", 'url(https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?cs=srgb&dl=pexels-philippe-donn-1169754.jpg&fm=jpg').css("BackgroundRepeat", 'no-repeat').css('BackgroundSize', 'cover');
+          })
+          $(".b0").click(()=>{
+            $('body').css("backgroundImage", 'url(../Imagens/i552851.jpeg').css("BackgroundRepeat", 'no-repeat').css('BackgroundSize', 'cover');
+          })
+      });
     
-    function openPage(idPagina, link)
-    {
-      $(".tab").hide();      
-      $("ul.navbar-nav, li").removeClass("active");          
+      function openPage(idPagina, link)
+      {
+        $(".tab").hide();      
+        $("ul.navbar-nav, li").removeClass("active");          
 
       $("#" + idPagina).fadeIn(500);     
       if (link != null)
         link.parentNode.className += " active";
-    }
-    function changeviadagem(id) {
-      $('.nav-item').css("backgroundColor", "#222222")
-      $("#"+id).css("backgroundColor", "#080808")
-    }
+      }
+      function changeviadagem(id) {
+        $('.nav-item').css("backgroundColor", "#222222")
+       $("#"+id).css("backgroundColor", "#080808")
+      }
     
-
-
     
-;
+    
+      function imv() {
+        $('.ing li').fadeOut()
+        setTimeout(function() {
+          $("#cimg").find('img').each(function(){
+            if($(this).is(':visible')){
+             $('.ing li').each(function(){
+                if($(this).attr('id')==$('.carousel-item img:visible').attr('id'))
+                 $(this).fadeIn()
+             })
+             }
+         });      
+        }, 1000)
+      }
+
+      
     
 
 
@@ -81,13 +100,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item" id="0" onclick="changeviadagem(0)">
-                  <a class="nav-link active" aria-current="page" href="#" onclick="openPage('paginaHome', this)">A Origem</a>
+                  <a class="nav-link active b0" aria-current="page" href="#" onclick="openPage('paginaHome', this)">A Origem</a>
                 </li>
                 <li class="nav-item" id="1" onclick="changeviadagem(1)">
-                  <a class="nav-link" href="#" onclick="openPage('pagina1', this)">Pioneiros</a>
+                  <a class="nav-link b0" href="#" onclick="openPage('pagina1', this)">Pioneiros</a>
                 </li>
                 <li class="nav-item" id="2" onclick="changeviadagem(2)">
-                  <a class="nav-link" href="#" onclick="openPage('pagina2', this)">Sistema Solar</a>
+                  <a class="nav-link ss" href="#" onclick="openPage('pagina2', this)">Sistema Solar</a>
                 </li>
               </ul>
             </div>
@@ -114,12 +133,12 @@
      <div class="tab" id="pagina1">
         <h3 class="p2" >Pioneiros</h3>
         <div id="carouselExampleIndicators" class="carousel slide">
-          <div class="carousel-indicators">
+          <div onclick="imv()" class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
           </div>
-          <div class="carousel-inner">
+          <div id="cimg" class="carousel-inner">
             <div class="carousel-item active">
               <img id="0" src="../Imagens/images.jpg" " alt="...">
             </div>
@@ -130,11 +149,11 @@
               <img id="2" src="../Imagens/images (1).jpg"  alt="...">
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <button onclick="imv()" class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <button onclick="imv()" class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
@@ -142,14 +161,17 @@
 
         <div>
           <ul class="ing">
-            <li id="0" hidden>
-              <p>Iuri Alexeievitch Gagarin foi um cosmonauta soviético e o primeiro ser humano a viajar pelo espaço, em 12 de abril de 1961, a bordo da Vostok 1. Esta espaçonave possuía dois módulos: o módulo de equipamentos e a cápsula onde ficou o cosmonauta.</p>
+            <li id="0">
+              <p>A bordo da nave Vostok 1, o cosmonauta soviético Yuri Gagarin se tornou o primeiro humano a ser lançado ao espaço em 12 de abril de 1961. Este foi o primeiro grande marco da Corrida Espacial, protagonizada entre Estados Unidos e União Soviética, que, em plena Guerra Fria, batalhavam "na miúda" para ver quem conquistava o espaço primeiro. <br> <br> 
+                 A Vostok 1, por sinal, era uma nave bastante humilde, medindo apenas 4,4 metros de comprimento por 2,4 m de diâmetro, e pesando 4.725 quilos. Ali, havia dois módulos, sendo um para acomodar os equipamentos e tanque de combustível, enquanto o outro era a cápsula onde o cosmonauta sentou ali, quietinho, durante a experiência. <br> <br> 
+                 Gagarin disputou a vaga histórica com outros 19 pilotos previamente selecionados após testes físicos e psicológicos rigorosíssimos, sendo escolhido por conta de seu excelente desempenho durante o treinamento, além de ter uma origem camponesa (o que contou pontos para o regime político comunista). Mas sua personalidade cativante e características físicas "compactas" (ele tinha somente 1,57 m de altura e pesava 69 kg) também foram diferenciais considerados na hora da seleção.</p>
             </li>
-            <li id="1" hidden>
-              <p>Neil Alden Armstrong foi um engenheiro aeroespacial, aviador naval, piloto de teste, astronauta e professor norte-americano que tornou-se o primeiro ser humano a pisar na Lua em 1969.</p>
+            <li id="1" style="display: none;">
+              <p>Neil Alden Armstrong (Wapakoneta, 5 de agosto de 1930 – Cincinnati, 25 de agosto de 2012) foi um engenheiro aeroespacial, aviador naval, piloto de teste, astronauta e professor norte-americano que tornou-se o primeiro ser humano a pisar na Lua em 1969. Armstrong estudou engenharia na Universidade Purdue; em 1949 tornou-se aspirante da Marinha dos Estados Unidos e, no ano seguinte, formou-se aviador naval. Lutou na Guerra da Coreia a partir do porta-aviões USS Essex e depois completou seu bacharelado em engenharia; na sequência, trabalhou como piloto de testes na Estação de Voo de Alta-Velocidade da Base Aérea Edwards, voando diversas aeronaves da Série Centenária e, por sete vezes, no North American X-15. Também participou de dois programas espaciais concebidos pela Força Aérea: Man in Space Soonest e X-20 Dyna-Soar. <br> <br>
+                Armstrong entrou para o corpo de astronautas da NASA em seu segundo grupo, selecionado em 1962. Fez seu primeiro voo espacial como comandante da Gemini VIII em março de 1966, tornando-se o primeiro astronauta civil da NASA a ir para o espaço. Ele realizou, junto com o piloto David Scott, o primeiro acoplamento bem sucedido entre duas naves espaciais na história, mas a missão precisou ser abortada depois de dez horas, pois Armstrong utilizara o combustível de seu controle de reentrada a fim de impedir um giro perigoso causado por um propulsor emperrado. Durante seus treinos na NASA para ser o comandante da Apollo 11, precisou ejetar do Veículo de Pesquisa de Alunissagem momentos antes de uma queda.</p>
             </li>
-            <li id="2" hidden>
-              <p>Laika era um cadela com cerca de dois anos de idade, que vivia pelas ruas de Moscou, capital da Rússia. Ela se tornou a primeira criatura terrestre viva a orbitar a Terra na missão da Sputnik 2, que aconteceu em 3 de novembro de 1957.</p>
+            <li id="2" style="display: none;">
+              <p>Originalmente, a chamaram de Kudriavka, que significa "risadinha" - mas o nome que ficou mesmo foi Laika, devido à sua raça. O objetivo era lançar a cachorrinha para o espaço a fim de conhecer os efeitos da viagem sobre os seres vivos. O Sputnik 2 foi lançado em 3 de novembro de 1957. Os sinais vitais da Laika eram seguidos pelo controle em Terra. </p>
             </li>  
           </ul>
         </div>
@@ -158,31 +180,68 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
         
      <div class="tab" id="pagina2">
         <h3>Sistema Solar</h3>
-        <p>Conteúdo da página 2...</p>  
-     </div>
-  
+        <div class="sun"></div>
+        
+        <div class="mercury-outline">
+          <div class="mercury">
+            <p class=".pm">Mercurio</p>
+          </div>
+        </div>
+
+        <div class="venus-outline-1">
+          <div class="venus">
+            <p>Venus</p>
+          </div>
+        </div>
+
+        <div class="earth-outline-1">
+          <div class="earth">
+            <div class="earth-circle">
+                <div class="earth-inner"></div>
+            </div>
+            <p>Terra</p>
+          </div>
+        </div>
+
+        <div class="mars-outline-1">
+          <div class="mars">
+            <p>Marte</p>
+          </div>
+        </div>
+
+        <div class="jupiter-outline-1">
+          <div class="jupiter">
+            <p>Jupiter</p>
+          </div>
+        </div>
+
+        <div class="saturn-outline-1">
+          <div class="saturn">
+            <p>Saturno</p>
+          </div>
+        </div>
+
+        <div class="uranus-outline-1">
+          <div class="uranus">
+            <p>Urano</p>
+          </div>
+        </div>
+
+        <div class="neptune-outline-1">
+          <div class="neptune">
+            <p>Netuno</p>
+          </div>
+        </div>
+        
+
+
+      </div>   
     </div>
-    
-
-
-
-
+  </div>    
+</div>
 
 
 
