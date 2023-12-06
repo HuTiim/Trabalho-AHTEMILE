@@ -93,7 +93,8 @@ p{
 .mercury{
     height: 20px;
     width: 20px;
-    background: #a94c2b;
+    /* background: #a94c2b; */
+    background-image: url(https://i.pinimg.com/originals/42/ba/ed/42baeddb9c19d8e5e363823463425a28.gif);
     border-radius: 50%;
     position: absolute;
     box-shadow: -4px 2px 56px #f9c05f;
@@ -151,7 +152,7 @@ p{
 .earth{
     height: 50px;
     width: 50px;
-    background-image:url(../Imagens/098366e6994dd75ab46b47cd27b2c9d4-icone-do-planeta-terra.png);
+    background-image:url(https://i.pinimg.com/originals/44/fd/4d/44fd4de0592b4358507aaf900e910911.gif);
     background-size: 100%;
     border-radius: 50%;
     position: absolute;
