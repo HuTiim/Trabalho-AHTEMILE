@@ -93,8 +93,8 @@ p{
 .mercury{
     height: 20px;
     width: 20px;
-    /* background: #a94c2b; */
-    background-image: url(https://i.pinimg.com/originals/42/ba/ed/42baeddb9c19d8e5e363823463425a28.gif);
+    background: #a94c2b;
+    /* background-image: url(https://i.pinimg.com/originals/42/ba/ed/42baeddb9c19d8e5e363823463425a28.gif); */
     border-radius: 50%;
     position: absolute;
     box-shadow: -4px 2px 56px #f9c05f;
