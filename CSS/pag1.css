@@ -126,22 +126,22 @@ p{
 }
 
 .venus{
-        height: 40px;
-        width: 40px;
+        height: 50px;
+        width: 50px;
         background-image:url(../Imagens/venus_globe9156235_thumb.jpg);
         background-size: 100%;
         border-radius: 50%;
         position: absolute;
         box-shadow: -4px 2px 56px #c1aa81;
-        left: 42.5%;
+        left: 40%;
         top: 41%;
         transform: translate(-50%,-50%);
         animation: orbit3 12.27s linear infinite;
 }
 
 @keyframes orbit3{
-    from{transform: rotate(0deg)translateX(110px) rotate(0deg);}
-    to{transform: rotate(360deg)translateX(110px) rotate(-360deg);}
+    from{transform: rotate(0deg)translateX(100px) rotate(0deg);}
+    to{transform: rotate(360deg)translateX(100px) rotate(-360deg);}
 }
 
 .venus-outline-1{
@@ -227,8 +227,8 @@ width: 530px;
 }
 
 .jupiter{
-    height: 40px;
-    width: 40px;
+    height: 80px;
+    width: 80px;
     background-image:url(https://tm.ibxk.com.br/2021/05/12/12164405600395.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -242,13 +242,13 @@ width: 530px;
 }
 
 @keyframes orbit7{
-from{transform: rotate(0deg)translateX(320px) rotate(0deg);}
-to{transform: rotate(360deg)translateX(320px) rotate(-360deg);}
+from{transform: rotate(0deg)translateX(300px) rotate(0deg);}
+to{transform: rotate(360deg)translateX(300px) rotate(-360deg);}
 }
 
 .jupiter-outline-1{
-height: 650px;
-width: 650px;
+height: 670px;
+width: 670px;
 }
 
 .saturn{
@@ -267,13 +267,13 @@ width: 650px;
 }
 
 @keyframes orbit8{
-from{transform: rotate(0deg)translateX(380px) rotate(0deg);}
-to{transform: rotate(360deg)translateX(380px) rotate(-360deg);}
+from{transform: rotate(0deg)translateX(400px) rotate(0deg);}
+to{transform: rotate(360deg)translateX(400px) rotate(-360deg);}
 }
 
 .saturn-outline-1{
-height: 750px;
-width: 750px;
+height: 780px;
+width: 780px;
 }
 
 .uranus{
@@ -292,13 +292,13 @@ width: 750px;
 }
 
 @keyframes orbit9{
-from{transform: rotate(0deg)translateX(430px) rotate(0deg);}
-to{transform: rotate(360deg)translateX(430px) rotate(-360deg);}
+from{transform: rotate(0deg)translateX(450px) rotate(0deg);}
+to{transform: rotate(360deg)translateX(450px) rotate(-360deg);}
 }
 
 .uranus-outline-1{
-height: 850px;
-width: 850px;
+height: 900px;
+width: 900px;
 }
 
 .neptune{
@@ -317,16 +317,16 @@ width: 850px;
 }
 
 @keyframes orbit10{
-from{transform: rotate(0deg)translateX(470px) rotate(0deg);}
-to{transform: rotate(360deg)translateX(470px) rotate(-360deg);}
+from{transform: rotate(0deg)translateX(505px) rotate(0deg);}
+to{transform: rotate(360deg)translateX(505px) rotate(-360deg);}
 }
 
 .neptune-outline-1{
-height: 935px;
-width: 935px;
+height: 1000px;
+width: 1000px;
 }
 
 .mg{
     position: relative;
-    margin-top: 450px;
+    margin-top: 480px;
 }
